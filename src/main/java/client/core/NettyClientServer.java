@@ -15,9 +15,9 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import utils.CommonUtils;
 import utils.TypeEnum;
 /**
- * @Author yujian
- * @Description Bootstrap启动类
- * @Date 2021/2/2
+ * Author yujian
+ * Description Bootstrap启动类
+ * Date 2021/2/2
  */
 public class NettyClientServer {
 

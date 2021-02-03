@@ -5,9 +5,9 @@ import client.core.NettyClientServer;
 import io.netty.util.internal.StringUtil;
 import org.apache.commons.cli.*;
 /**
- * @Author yujian
- * @Description 客户端cli
- * @Date 2021/2/2
+ * Author yujian
+ * Description 客户端cli
+ * Date 2021/2/2
  */
 public class StartClient {
 

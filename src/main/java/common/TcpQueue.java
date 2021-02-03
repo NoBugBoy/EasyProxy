@@ -4,9 +4,9 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingQueue;
 /**
- * @Author yujian
- * @Description tcp阻塞队列
- * @Date 2021/2/2
+ * Author yujian
+ * Description tcp阻塞队列
+ * Date 2021/2/2
  */
 public class TcpQueue extends LinkedBlockingQueue<Object>{
     private final static Map<String,TcpQueue> queues = new ConcurrentHashMap<>();

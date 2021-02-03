@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSON;
 import common.Message;
 import common.TcpQueue;
 import io.netty.channel.Channel;
-import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.group.ChannelGroup;
@@ -17,9 +16,9 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Author yujian
- * @Description proxy处理器，只处理某一个proxy端口的数据
- * @Date 2021/2/2
+ * Author yujian
+ * Description proxy处理器，只处理某一个proxy端口的数据
+ * Date 2021/2/2
  */
 public class ProxyServerHandler extends SimpleChannelInboundHandler<byte[]> {
     public final static ChannelGroup channels = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);

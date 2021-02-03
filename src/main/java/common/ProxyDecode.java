@@ -7,9 +7,9 @@ import utils.MessageBuild;
 
 import java.util.List;
 /**
- * @Author yujian
- * @Description 二进制解码器
- * @Date 2021/2/2
+ * Author yujian
+ * Description 二进制解码器
+ * Date 2021/2/2
  */ 
 public class ProxyDecode extends MessageToMessageDecoder<ByteBuf> {
     ChannelHandlerContext ctx;

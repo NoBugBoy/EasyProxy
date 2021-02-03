@@ -7,9 +7,9 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 import server.handler.ServerHandler;
 /**
- * @Author yujian
- * @Description 服务端管道
- * @Date 2021/2/2
+ * Author yujian
+ * Description 服务端管道
+ * Date 2021/2/2
  */ 
 public class ServerInitializer extends ChannelInitializer<SocketChannel> {
     private final Integer time;

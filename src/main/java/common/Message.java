@@ -1,8 +1,8 @@
 package common;
 /**
- * @Author yujian
- * @Description 二进制消息体
- * @Date 2021/2/2
+ * Author yujian
+ * Description 二进制消息体
+ * Date 2021/2/2
  */
 public class Message {
   private   int magic;

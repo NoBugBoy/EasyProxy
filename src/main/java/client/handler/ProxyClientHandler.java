@@ -12,9 +12,9 @@ import org.apache.commons.codec.Charsets;
 import java.util.HashMap;
 import java.util.Map;
 /**
- * @Author yujian
- * @Description 本地服务的proxy 与被穿透的服务交互
- * @Date 2021/2/2
+ * Author yujian
+ * Description 本地服务的proxy 与被穿透的服务交互
+ * Date 2021/2/2
  */ 
 public class ProxyClientHandler extends SimpleChannelInboundHandler<byte[]> {
     private final int mappingPort;

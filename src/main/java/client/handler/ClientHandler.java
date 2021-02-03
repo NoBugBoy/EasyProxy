@@ -19,9 +19,9 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @Author yujian
- * @Description 客户端处理器
- * @Date 2021/2/2
+ * Author yujian
+ * Description 客户端处理器
+ * Date 2021/2/2
  */
 public class ClientHandler extends SimpleChannelInboundHandler<Message> {
     public static Map<Integer, Channel> proxyPortChannel = new ConcurrentHashMap<>();

@@ -12,9 +12,9 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import utils.CommonUtils;
 import utils.TypeEnum;
 /**
- * @Author yujian
- * @Description 内网穿透服务端
- * @Date 2021/2/2
+ * Author yujian
+ * Description 内网穿透服务端
+ * Date 2021/2/2
  */ 
 public class NettyServer {
     public  void start(ChannelHandler initializer,int port){

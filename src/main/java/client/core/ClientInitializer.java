@@ -11,9 +11,9 @@ import io.netty.handler.timeout.IdleStateHandler;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Author yujian
- * @Description 客户端管道
- * @Date 2021/2/2
+ * Author yujian
+ * Description 客户端管道
+ * Date 2021/2/2
  */ 
 public class ClientInitializer extends ChannelInitializer<SocketChannel> {
     private final String proxyAddress;

@@ -1,8 +1,8 @@
 package common;
 /**
- * @Author yujian
- * @Description 状态管理
- * @Date 2021/2/2
+ * Author yujian
+ * Description 状态管理
+ * Date 2021/2/2
  */ 
 public interface Status {
     int conn = 1;

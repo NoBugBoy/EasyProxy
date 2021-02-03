@@ -9,9 +9,9 @@ import utils.MessageBuild;
 import java.util.concurrent.*;
 
 /**
- * @author yujian
- * @description 1
- * @create 2021-02-02 10:42
+ * author yujian
+ * description 1
+ * create 2021-02-02 10:42
  **/
 public class KeepAlive {
     private final ScheduledThreadPoolExecutor threadPoolExecutor = new ScheduledThreadPoolExecutor(1);

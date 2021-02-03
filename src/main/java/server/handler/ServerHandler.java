@@ -28,9 +28,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CopyOnWriteArraySet;
 
 /**
- * @Author yujian
- * @Description 服务端处理器
- * @Date 2021/2/2
+ * Author yujian
+ * Description 服务端处理器
+ * Date 2021/2/2
  */ 
 public class ServerHandler extends SimpleChannelInboundHandler<Message> {
 
