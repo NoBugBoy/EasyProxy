@@ -4,7 +4,8 @@
 jar包下载地址
 服务端：[EasyProxyServer](https://github.com/NoBugBoy/EasyProxy/releases/download/1.0/EasyProxyServer-1.0.jar)
 客户端：[EasyProxyClient](https://github.com/NoBugBoy/EasyProxy/releases/download/1.0/EasyProxyClient-1.0.jar)
-源代码（点个star谢谢）：[Github](https://github.com/NoBugBoy/EasyProxy/tree/1.0)
+docker镜像：```docker pull yujian1996/eps:1.0```
+源代码（点个star谢谢）：[Github](https://github.com/NoBugBoy/EasyProxy/tree/main)
 > 大致流程图
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210203160536292.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RheV9EYXlfTm9fQnVn,size_16,color_FFFFFF,t_70)
@@ -43,10 +44,15 @@ java -jar EasyProxyClient-1.0.jar
 | 命令 | 作用 |
 |--|--|
 | -port | 启动的端口号 |
-| -sync | 是否同步等待（设置后不会无限等待） |
-| time | 同步等待时间，超时自动返回 |
+| -sync | 是否同步等待（设置后不会无限等待,可选） |
+| time | 同步等待时间，超时自动返回，可选 默认30S |
 | -h | 提示以上命令 |
 
+docker启动
+```java
+# 命令和上面一样，注意SPORT需要和容器暴露的端口保持一致
+docker run -d --name aaa -p 18888:18888 -e SPORT=18888 -e SYNC=true -e -TIME=30 yujian1996/eps:1.0
+```
 
 > 遇到的几个问题，和解决办法
 
