@@ -11,7 +11,7 @@
         </developer>
     </developers>
     <groupId>com.github.nobugboy</groupId>
-    <artifactId>EasyProxy</artifactId>
+    <artifactId>EasyProxyClient</artifactId>
     <version>1.0</version>
     <name>EasyProxy</name>
     <description>easy proxy</description>
@@ -69,7 +69,7 @@
                                 <transformers>
                                     <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                         <!--打包需要修改此处-->
-                                        <mainClass>server.StartServer</mainClass>
+                                        <mainClass>client.StartClient</mainClass>
                                     </transformer>
                                 </transformers>
                             </configuration>
@@ -140,6 +140,11 @@
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>4.5.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.10</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>

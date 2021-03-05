@@ -76,8 +76,6 @@ public class ProxyServerHandler extends SimpleChannelInboundHandler<byte[]> {
             data = JSON.toJSONString(map);
             message.setLength(data.getBytes().length);
             message.setData(data);
-            System.out.println(channel.isOpen());
-            System.out.println(channel.isActive());
             channel.writeAndFlush(message);
             if(this.sync){
                 Object take = TcpQueue.getQueue(port).poll(checkTime(time),TimeUnit.SECONDS);

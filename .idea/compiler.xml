@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="localProxy" />
-        <module name="EasyProxy" />
+        <module name="EasyProxyClient" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="client" target="8" />
+      <module name="EasyProxy" target="8" />
+      <module name="EasyProxyServer" target="8" />
       <module name="localProxy" target="8" />
       <module name="server" target="8" />
     </bytecodeTargetLevel>

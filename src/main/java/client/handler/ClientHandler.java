@@ -52,7 +52,7 @@ public class ClientHandler extends SimpleChannelInboundHandler<Message> {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        System.out.println(cause.getMessage());
+        System.err.println(cause.getMessage());
         ctx.close();
     }
 
@@ -75,9 +75,8 @@ public class ClientHandler extends SimpleChannelInboundHandler<Message> {
         int type = msg.getType();
         if(type == Status.connbak){
             connbak();
-            System.out.println("创建内网穿透成功");
+            System.out.println("创建内网穿透成功" + ctx.channel().remoteAddress());
         }else if(type == Status.ping){
-            System.out.println("收到心跳包");
             // ctx.channel().writeAndFlush(  ctx.channel().writeAndFlush( ctx.channel().writeAndFlush(MessageBuild.onlyType(Status.pong))));
         }else if(type == Status.data){
             data(msg);
@@ -89,8 +88,6 @@ public class ClientHandler extends SimpleChannelInboundHandler<Message> {
         String  port    = (String)map.get("port");
         Channel channel = proxyPortChannel.get(Integer.parseInt(port));
         if(channel != null ){
-            System.out.println(channel.isActive());
-            System.out.println(channel.isOpen());
             String result = (String)map.get("data");
             channel.writeAndFlush(result.getBytes());
         }
