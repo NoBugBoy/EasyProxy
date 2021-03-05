@@ -23,6 +23,7 @@ docker镜像：```docker pull yujian1996/eps:1.0```
 
 > 编码
 
+### 客户端代理单个端口启动方式
 先从客户端启动命令上进行解释
 ```java
 java -jar EasyProxyClient-1.0.jar 
@@ -34,10 +35,26 @@ java -jar EasyProxyClient-1.0.jar
 | -local | 代表需要穿透的本地host:port |
 | -pp | 与本地端口映射的服务器端口，在服务器请求该端口穿透到本地服务 |
 | -h | 提示以上命令 |
+### 客户端代理多个端口启动方式
+```yml
+在jar包同级目录放入proxy.yml并按照模板编写，可一次代理多个本地端口
+
+proxys:
+    - server: localhost:18888
+      local: localhost:8080
+      proxyPort: 18080
+    - server: localhost:18888
+      local: localhost:8081
+      proxyPort: 18081
+
+
+```
+
 
 当与服务端建立连接后，EasyProxyServer会新监听一个-pp指定的端口，监听成功后，通知EasyProxyClient，EasyProxyClient与本地服务建立连接，然后就可以访问了。
 
 服务端的启动命令解释
+### 服务端启动方式 1
 ```java
  java -jar EasyProxyServer-1.0.jar -port 18888 -sync
 ```
@@ -48,10 +65,12 @@ java -jar EasyProxyClient-1.0.jar
 | time | 同步等待时间，超时自动返回，可选 默认30S |
 | -h | 提示以上命令 |
 
-docker启动
+### 服务端启动方式 2 docker启动
 ```java
-# 命令和上面一样，注意SPORT需要和容器暴露的端口保持一致
+# 命令和上面一样，注意SPORT需要和容器暴露的端口保持一致,客户端指定的端口也要暴露出来，或者使用host模式
 docker run -d --name aaa -p 18888:18888 -e SPORT=18888 -e SYNC=true -e -TIME=30 yujian1996/eps:1.0
+#host模式
+docker run -d --name aaa --network=host -e SPORT=18888 -e SYNC=true -e -TIME=30 yujian1996/eps:1.0
 ```
 
 > 遇到的几个问题，和解决办法
