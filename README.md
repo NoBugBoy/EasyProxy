@@ -36,8 +36,9 @@ java -jar EasyProxyClient-1.0.jar
 | -pp | 与本地端口映射的服务器端口，在服务器请求该端口穿透到本地服务 |
 | -h | 提示以上命令 |
 ### 客户端代理多个端口启动方式
-```yml
 在jar包同级目录放入proxy.yml并按照模板编写，可一次代理多个本地端口
+```yml
+java -jar EasyProxyClient-1.0.jar -yml
 
 proxys:
     - server: localhost:18888
