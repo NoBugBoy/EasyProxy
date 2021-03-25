@@ -3,6 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
     <developers>
         <developer>
             <name>yujian</name>
@@ -10,6 +11,11 @@
             <url>https://github.com/NoBugBoy/</url>
         </developer>
     </developers>
+    <modules>
+        <module>easyproxyclient</module>
+        <module>common</module>
+        <module>easyproxyserver</module>
+    </modules>
     <groupId>com.github.nobugboy</groupId>
     <artifactId>EasyProxyClient</artifactId>
     <version>1.0</version>
@@ -69,7 +75,7 @@
                                 <transformers>
                                     <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                         <!--打包需要修改此处-->
-                                        <mainClass>client.StartClient</mainClass>
+                                        <mainClass>StartClient</mainClass>
                                     </transformer>
                                 </transformers>
                             </configuration>

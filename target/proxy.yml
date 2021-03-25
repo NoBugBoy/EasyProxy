@@ -1,8 +1,0 @@
-proxys:
-    - server: localhost:8888
-      local: localhost:8080
-      proxyPort: 18080
-    - server: localhost:8888
-      local: localhost:8081
-      proxyPort: 18081
-

@@ -46,7 +46,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>client.StartClient</mainClass>
+                  <mainClass>StartClient</mainClass>
                 </transformer>
               </transformers>
             </configuration>

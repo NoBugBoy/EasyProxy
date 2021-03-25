@@ -1,8 +1,0 @@
-client
-client.core
-client.handler
-common
-server
-server.core
-server.handler
-utils
